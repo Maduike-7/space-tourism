@@ -27,4 +27,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+alert("This was made by goody4444");
+
 

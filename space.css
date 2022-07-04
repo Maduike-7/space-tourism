@@ -5,10 +5,10 @@
 }
 
 body {
+  /* overflow-y: hidden; */
   background-image: url(images/background-crew-desktop.jpg);
   background-size: cover;
-
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 /* navbar container section */
@@ -65,14 +65,26 @@ body {
   list-style: none;
 }
 .nav ul li a {
+  cursor: pointer;
+  font-size: 12px;
+  width: 25%; 
+  text-align: center; 
   color: silver;
   text-decoration: none;
 }
 
 .nav ul li a:hover {
+  cursor: pointer;
+  font-size: 10px;
   color: #ffffff;
   text-decoration: none;
 }
+
+
+.nav  a.active {
+  background-color: #ffffff;
+}
+
 
 .nums {
   font-family: 'Oranienbaum', serif;
@@ -95,6 +107,7 @@ body {
   color: grey;
 }
 .text h3:nth-child(1) {
+  margin-bottom: 20%;
   display: flex;
   font-family: 'Oranienbaum', serif;
   font-size: 20px;
@@ -114,7 +127,7 @@ body {
 
 .text h1 {
   font-family: 'Oranienbaum', serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #ffffff;
   margin-bottom: 25px;
 }
@@ -134,26 +147,23 @@ body {
 /* Slideshow container section */
 .slideshow-container {
   
-  display: flex;
+    display: flex;
     align-items: center;
     position: relative;
-    top: 19%;
+    top: 16%;
     left: 50%;
-    /* margin-top: 20px; */
     transform: translate(-50%) ;
    
 }
 
 .slideshow-container .douglas {
-   margin-left: 589.1px;
+   margin-left: 575px;
    padding-top: none;
    transition: 5s ease-in-out;
     transform: translate(-50%) ;
 }
 
-.row{
-  display: flex;
-}
+
 
 /* Hide the images by default */
 .mySlides {
@@ -183,7 +193,7 @@ body {
   border-radius: 3px 0 0 3px;
 }
 
-On hover, add a black background color with a little bit see-through 
+/* On hover, add a black background color with a little bit see-through  */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -208,17 +218,17 @@ On hover, add a black background color with a little bit see-through
   border-radius: 100%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  position: relative;
+  margin-top: 20%;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #ffffff;
 }
 
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2.5s;
 }
 
 @keyframes fade {
@@ -226,7 +236,7 @@ On hover, add a black background color with a little bit see-through
   to {opacity: 1}
 }
 
-@media all and (max-width:1280×800px), (max-width:768×1024px) {
+@media all and (max-width:600px) {
 
 .navbar-container {
   margin-top: 0%;
@@ -236,7 +246,6 @@ On hover, add a black background color with a little bit see-through
 
  .navbar-container .logo{
   margin-top: 25px;
-  margin-left: 40px;
   width: 50px;
   border-radius: 30px;
   height: 50px;
@@ -244,8 +253,8 @@ On hover, add a black background color with a little bit see-through
 } 
 
 .nav ul {
-  height: 10vh;
-  width: 450px;
+    height: 10vh;
+    width: 450px;
    display: flex;
    justify-content: space-evenly;
    background: rgba(225, 225, 225, 0.082);
@@ -284,4 +293,46 @@ On hover, add a black background color with a little bit see-through
   display: none;
 }
 
+
+.text h1 {
+  color: #ffffff;
 }
+
+
+.text p {
+  color: snow;
+  /* width:400px; */
+}
+
+.slideshow-container {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideshow-container .douglas {
+   display: flex;
+}
+
+}
+
+
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url(images/background-crew-desktop.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 500px) {
+ .nav ul li a {
+  float: none;
+  display: block;
+  width: 100%;
+  text-align: left; 
+}
+}
+
+
